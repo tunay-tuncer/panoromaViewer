@@ -68,19 +68,21 @@ const PanoramaViewer = ({ selectedImage }) => {
   }
 
   return (
-    <div className="panorama-viewer">
-      <div className="viewer-header">
-        <h3 className="image-title">{selectedImage.name}</h3>
-        <div className="viewer-controls-header">
-          <button
-            className="fullscreen-btn"
-            onClick={toggleFullscreen}
-            title="Toggle Fullscreen"
-          >
-            {isFullscreen ? '⛶' : '⛶'}
-          </button>
+    <div className={`panorama-viewer ${isFullscreen ? 'fullscreen-mode' : ''}`}>
+      {!isFullscreen && (
+        <div className="viewer-header">
+          <h3 className="image-title">{selectedImage.name}</h3>
+          <div className="viewer-controls-header">
+            <button
+              className="fullscreen-btn"
+              onClick={toggleFullscreen}
+              title="Toggle Fullscreen"
+            >
+              ⛶
+            </button>
+          </div>
         </div>
-      </div>
+      )}
 
       <div className="panorama-container">
         <Pannellum
@@ -89,11 +91,24 @@ const PanoramaViewer = ({ selectedImage }) => {
         />
       </div>
 
-      <div className="viewer-controls">
-        <div className="control-info">
-          <span>🖱️ Drag to rotate • 🖱️ Scroll to zoom • 📱 Touch to navigate • 360° Panorama View</span>
+      {!isFullscreen && (
+        <div className="viewer-controls">
+          <div className="control-info">
+            <span>🖱️ Drag to rotate • 🖱️ Scroll to zoom • 📱 Touch to navigate • 360° Panorama View</span>
+          </div>
         </div>
-      </div>
+      )}
+
+      {/* Fullscreen exit button - only visible in fullscreen mode */}
+      {isFullscreen && (
+        <button
+          className="fullscreen-exit-btn"
+          onClick={toggleFullscreen}
+          title="Exit Fullscreen"
+        >
+          ✕
+        </button>
+      )}
     </div>
   )
 }
