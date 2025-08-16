@@ -62,6 +62,9 @@
   padding: 0.5rem;
   opacity: 0;
   transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .gallery-item:hover .image-overlay {
@@ -73,7 +76,18 @@
   color: #ffffff;
   font-weight: 500;
   display: block;
-  text-align: center;
+  text-align: left;
+}
+
+.panorama-badge {
+  background-color: #3b82f6;
+  color: #ffffff;
+  font-size: 0.6rem;
+  font-weight: 600;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .selected-info {
@@ -87,11 +101,21 @@
 .selected-info p {
   font-size: 0.875rem;
   color: #d1d5db;
-  margin: 0;
+  margin: 0 0 0.5rem 0;
+}
+
+.selected-info p:last-child {
+  margin-bottom: 0;
 }
 
 .selected-info strong {
   color: #3b82f6;
+}
+
+.panorama-info {
+  font-size: 0.8rem !important;
+  color: #10b981 !important;
+  font-style: italic;
 }
 
 /* Mobile responsive design */
@@ -109,6 +133,15 @@
   .selected-info {
     padding: 0.5rem;
   }
+  
+  .image-name {
+    font-size: 0.7rem;
+  }
+  
+  .panorama-badge {
+    font-size: 0.55rem;
+    padding: 0.15rem 0.3rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -123,6 +156,11 @@
   }
   
   .image-name {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
+  }
+  
+  .panorama-badge {
+    font-size: 0.5rem;
+    padding: 0.1rem 0.25rem;
   }
 }

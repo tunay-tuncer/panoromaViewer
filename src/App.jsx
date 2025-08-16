@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import PropTypes from 'prop-types'
 import './App.css'
 import PhotoGallery from './components/PhotoGallery'
 import PanoramaViewer from './components/PanoramaViewer'
@@ -23,6 +24,11 @@ function App() {
       </main>
     </div>
   )
+}
+
+// PropTypes for type checking
+App.propTypes = {
+  // App component doesn't receive props, but we can define them if needed in the future
 }
 
 export default App
