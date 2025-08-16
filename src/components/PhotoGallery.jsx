@@ -3,31 +3,35 @@ import PropTypes from 'prop-types'
 import './PhotoGallery.css'
 
 import img1 from '../assets/mutfakPanoroma.png'
+import img2 from '../assets/altKatPanoroma.png'
+import img3 from '../assets/UstKatAnaYatakOdasiPanoroma.png'
+import img4 from '../assets/UstKatKucukYatakOdasiYesilPanoroma.png'
+
 
 const PhotoGallery = ({ onImageSelect, selectedImage }) => {
     // Actual 360° panorama images - these are equirectangular panorama images
     const [images] = useState([
         {
             id: 1,
-            name: 'Mountain Lake',
+            name: 'Mutfak',
             url: img1,
             thumbnail: img1
         },
         {
             id: 2,
-            name: 'Desert Landscape',
-            url: 'https://pannellum.org/images/jfk.jpg',
-            thumbnail: 'https://pannellum.org/images/jfk.jpg'
+            name: 'Alt Kat Yatak Odası',
+            url: img2,
+            thumbnail: img2
         },
         {
             id: 3,
-            name: 'City Street',
-            url: 'https://pannellum.org/images/fall.jpg',
-            thumbnail: 'https://pannellum.org/images/fall.jpg'
+            name: 'Üst Kat Ana Yatak Odası',
+            url: img3,
+            thumbnail: img3
         },
         {
             id: 4,
-            name: 'Beach Sunset',
+            name: "Üst Kat Küçük Yatak Odası",
             url: 'https://pannellum.org/images/cerro-toco-0.jpg',
             thumbnail: 'https://pannellum.org/images/cerro-toco-0.jpg'
         },
@@ -36,12 +40,6 @@ const PhotoGallery = ({ onImageSelect, selectedImage }) => {
             name: 'Forest Path',
             url: 'https://pannellum.org/images/jfk.jpg',
             thumbnail: 'https://pannellum.org/images/jfk.jpg'
-        },
-        {
-            id: 6,
-            name: 'Urban Skyline',
-            url: 'https://pannellum.org/images/fall.jpg',
-            thumbnail: 'https://pannellum.org/images/fall.jpg'
         }
     ])
 
