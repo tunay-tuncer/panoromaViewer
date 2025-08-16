@@ -4,8 +4,8 @@ import './PhotoGallery.css'
 
 import img1 from '../assets/mutfakPanoroma.png'
 import img2 from '../assets/altKatPanoroma.png'
-import img3 from '../assets/UstKatAnaYatakOdasiPanoroma.png'
-import img4 from '../assets/UstKatKucukYatakOdasiYesilPanoroma.png'
+import img3 from '../assets/ustKatAnaYatakOdasiPanoroma.png'
+import img4 from '../assets/ustKatKucukYatakOdasiYesilPanoroma.png'
 
 
 const PhotoGallery = ({ onImageSelect, selectedImage }) => {
@@ -32,14 +32,8 @@ const PhotoGallery = ({ onImageSelect, selectedImage }) => {
         {
             id: 4,
             name: "Üst Kat Küçük Yatak Odası",
-            url: 'https://pannellum.org/images/cerro-toco-0.jpg',
-            thumbnail: 'https://pannellum.org/images/cerro-toco-0.jpg'
-        },
-        {
-            id: 5,
-            name: 'Forest Path',
-            url: 'https://pannellum.org/images/jfk.jpg',
-            thumbnail: 'https://pannellum.org/images/jfk.jpg'
+            url: img4,
+            thumbnail: img4
         }
     ])
 
