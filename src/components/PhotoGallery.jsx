@@ -6,6 +6,8 @@ import img1 from '../assets/mutfakPanoroma.png'
 import img2 from '../assets/altKatPanoroma.png'
 import img3 from '../assets/ustKatAnaYatakOdasiPanoroma.png'
 import img4 from '../assets/ustKatKucukYatakOdasiYesilPanoroma.png'
+import img5 from '../assets/KucukBanyoPanoroma.png'
+import img6 from '../assets/AnaBanyoPanoroma2.png'
 
 
 const PhotoGallery = ({ onImageSelect, selectedImage }) => {
@@ -34,6 +36,18 @@ const PhotoGallery = ({ onImageSelect, selectedImage }) => {
             name: "Üst Kat Küçük Yatak Odası",
             url: img4,
             thumbnail: img4
+        },
+        {
+            id: 5,
+            name: "Alt Kat Banyo",
+            url: img5,
+            thumbnail: img5
+        },
+        {
+            id: 6,
+            name: "Üst Kat Banyo",
+            url: img6,
+            thumbnail: img6
         }
     ])
 
